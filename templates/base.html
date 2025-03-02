@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Название проекта{% endblock %}</title>
+    <title>{% block title %}Project-Game{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="sidebar">
+        <a href="{% url 'home' %}">Главная</a>
         <a href="{% url 'game' %}">Игра</a>
+        <a href="{% url 'rating' %}">Рейтинг</a>
         <a href="{% url 'blog' %}">Блог</a>
         <a href="{% url 'news' %}">Новости</a>
         <a href="{% url 'roadmap' %}">Roadmap</a>
     </div>
     <div class="main-content">
         {% block content %}
-        <div class="project-title">Название проекта</div>
+        <div class="project-title">Project-Game</div>
         <div class="project-description">Описание проекта</div>
         <div class="game-link">
-            <a href="#">Ссылка на игру</a>
+            <a href="{% url 'gamesss' %}">Ссылка на игру</a>
         </div>
         <div class="social-links">
             <img src="{% static 'images/icon1.png' %}" alt="Icon 1">
