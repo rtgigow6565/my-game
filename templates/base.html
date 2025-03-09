@@ -4,30 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Project-Game{% endblock %}</title>
+    <title>{% block title %}Bitcoin Climb Racing{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/icon.png' %}">
 </head>
 <body>
     <div class="sidebar">
         <a href="{% url 'home' %}">Главная</a>
         <a href="{% url 'game' %}">Игра</a>
-        <a href="{% url 'rating' %}">Рейтинг</a>
-        <a href="{% url 'blog' %}">Блог</a>
-        <a href="{% url 'news' %}">Новости</a>
         <a href="{% url 'roadmap' %}">Roadmap</a>
     </div>
     <div class="main-content">
         {% block content %}
-        <div class="project-title">Project-Game</div>
-        <div class="project-description">Описание проекта</div>
-        <div class="game-link">
-            <a href="{% url 'gamesss' %}">Ссылка на игру</a>
+        <div class="project-title">
+            Bitcoin Climb Racing
+            <img src="{% static 'images/icon.png' %}" alt="Лого" class="logo">
+
+        <br>
+        <br>
         </div>
+        <div class="project-description">
+            <p>
+                <strong>Bitcoin Climb Racing</strong> — это аркадная 2D-гонка, вдохновлённая Hill Climb Racing, 
+                но с уникальной особенностью: вместо холмов трассы строятся по реальным графикам цены биткоина! 
+                Перепады высот отражают волатильность рынка, а игроку предстоит балансировать между риском и скоростью.  
+            </p>
+            <p>
+                📈 Испытай свои навыки в управлении транспортом на взлётах и падениях крипторынка! 🚀  
+                🏆 Пройди трассы, побей рекорды и соревнуйся с друзьями!
+            </p>
+        </div>
+        <div class="game-link">
+            <a href="https://67cd57977da2880008e17f56--bitcoin-climb-racing.netlify.app/" 
+               target="_blank" rel="noopener noreferrer">Играть сейчас</a>
+        </div>
+        <div class="game-screenshots">
+            <h2>Галерея игры</h2>
+            <div class="screenshots">
+                <img src="{% static 'images/screenshot_1.png' %}" alt="Скриншот 1">
+                <img src="{% static 'images/screenshot_2.png' %}" alt="Скриншот 2">
+                <img src="{% static 'images/screenshot_3.png' %}" alt="Скриншот 3">
+            </div>
+        </div>
+
         <div class="social-links">
-            <img src="{% static 'images/icon1.png' %}" alt="Icon 1">
-            <img src="{% static 'images/icon2.png' %}" alt="Icon 2">
-            <img src="{% static 'images/icon3.png' %}" alt="Icon 3">
-            <img src="{% static 'images/icon4.png' %}" alt="Icon 4">
+            <a href="https://t.me/yourchannel" target="_blank">
+                <img src="{% static 'images/telegram.png' %}" alt="Telegram">
+            </a>
+            <a href="https://twitter.com/yourgame" target="_blank">
+                <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+            </a>
+            <a href="https://discord.gg/yourgame" target="_blank">
+                <img src="{% static 'images/discord.png' %}" alt="Discord">
+            </a>
         </div>
         {% endblock %}
     </div>

@@ -12,5 +12,4 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('roadmap/', views.roadmap, name='roadmap'),
     path('rating/', views.radingame, name='rating'),
-    path('gamess/', csrf_exempt(views.game_view), name='gamesss'),
 ]

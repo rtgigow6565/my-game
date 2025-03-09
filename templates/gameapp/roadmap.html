@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}  {# Добавляем загрузку static #}
 
 {% block title %}Roadmap{% endblock %}
 
 {% block content %}
-<div class="project-title">Project-Game</div>
+<div class="project-title">Bitcoin Climb Racing</div>
 <p>Roadmap</p>
+<div class="game-screenshots">
+    <div class="screenshots112">
+        <img src="{% static 'images/roadmap.png' %}" alt="Скриншот 1">
+    </div>
+</div>
 {% endblock %}

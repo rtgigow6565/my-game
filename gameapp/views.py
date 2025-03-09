@@ -18,11 +18,3 @@ def roadmap(request):
 def radingame(request):
     return render(request, 'gameapp/rating.html')
 
-def game_view(request):
-    response = render(request, 'web3/web3bitcar.html')
-    response["Cross-Origin-Opener-Policy"] = "same-origin"
-    response["Cross-Origin-Embedder-Policy"] = "require-corp"
-    response["X-Content-Type-Options"] = "nosniff"
-    response["Access-Control-Allow-Origin"] = "*"
-    response["Access-Control-Allow-Headers"] = "Cross-Origin-Embedder-Policy, Cross-Origin-Opener-Policy"
-    return response

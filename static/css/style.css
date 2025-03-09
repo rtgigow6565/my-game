@@ -1,60 +1,190 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #1a1a2e;
+    color: #fff;
 }
 
+/* Боковая панель */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 220px;
     height: 100vh;
-    background-color: #2c3e50;
+    background: linear-gradient(180deg, #2c3e50, #1a1a2e);
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
 }
 
 .sidebar a:hover {
-    background-color: #34495e;
+    background-color: #ff9800;
+    transform: scale(1.05);
 }
 
+/* Основной контент */
 .main-content {
-    margin-left: 220px;
-    padding: 20px;
+    margin-left: 250px;
+    padding: 30px;
+    text-align: center;
 }
 
 .project-title {
-    font-size: 2em;
+    font-size: 4em;
+    font-weight: bold;
+    color: #ff9800;
+    text-shadow: 3px 3px 10px rgba(255, 152, 0, 0.7);
     margin-bottom: 20px;
 }
 
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-title img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+
 .project-description {
-    margin-bottom: 30px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-.game-link {
-    margin-bottom: 30px;
+.game-link a {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
+.game-link a:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+
+/* Социальные ссылки */
 .social-links {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .social-links img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+    .main-content {
+        margin-left: 190px;
+    }
+    .project-title {
+        font-size: 3em;
+    }
+    .game-link a {
+        font-size: 1.1em;
+    }
+}
+
+
+
+
+.game-screenshots {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.screenshots img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+}
+
+
+.screenshots112 img:hover {
+    transform: scale(1.12);
+}
+
+
+
+
+
+
+
+.game-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.game-controls, .game-bugs {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.game-controls ul, .game-bugs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-controls li, .game-bugs li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
